@@ -1,4 +1,4 @@
-# publish-beta[WIP]
+# publish-beta<sup>[WIP]</sup>
 Publish npm package in beta tag with version number  automatically increased.
 
 [![NPM version][npm-image]][npm-url]
