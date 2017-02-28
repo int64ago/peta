@@ -1,14 +1,17 @@
 {
-  "name": "publish-beta",
-  "version": "0.0.1",
+  "name": "peta",
+  "version": "1.0.0",
   "description": "Publish npm package in beta tag with version number automatically increased.",
-  "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "peta": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/int64ago/publish-beta.git"
+    "url": "git+https://github.com/int64ago/peta.git"
   },
   "keywords": [
     "npm",
@@ -18,7 +21,13 @@
   "author": "Cody Chan <int64ago@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/int64ago/publish-beta/issues"
+    "url": "https://github.com/int64ago/peta/issues"
   },
-  "homepage": "https://github.com/int64ago/publish-beta#readme"
+  "homepage": "https://github.com/int64ago/peta#readme",
+  "dependencies": {
+    "semver": "^5.3.0"
+  },
+  "engines": {
+    "node": ">= 7.6.0"
+  }
 }
