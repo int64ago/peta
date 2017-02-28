@@ -37,6 +37,8 @@ const publish = () => {
 
 const betaVer = createBeta(package);
 
+console.log('>>> Hello, I\'m Peta :-)')
 UpdateVersion(betaVer);
+console.log('>>> Try publishing, plz don\'t interrupt me >.<')
 publish();
 UpdateVersion(package.version);
