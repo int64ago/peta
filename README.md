@@ -16,7 +16,7 @@ The published version is based on three versions:
 Then, we get `version` from `max(onlineBeta || onlineLatest, local)`
 
 At last, we publish `semver.inc(version, 'prerelease', 'beta')` with beta tag
-> FYI: [semver](https://github.com/npm/node-semver)
+> For API infomation of semver: [semver](https://github.com/npm/node-semver)
 
 ## LICENSE
 MIT
