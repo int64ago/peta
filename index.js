@@ -12,8 +12,10 @@ if (!spawn) {
   return console.error('Node v7.6+ is required!');
 }
 
+const NPM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+
 const createBeta = (package) => {
-  const cmd = spawn('npm', ['show', package.name, 'dist-tags', '--json'])
+  const cmd = spawn(NPM, ['show', package.name, 'dist-tags', '--json'])
   const ver = JSON.parse(cmd.stdout.toString());
 
   const onlineVer = ver.beta || ver.latest;
@@ -30,7 +32,7 @@ const UpdateVersion = (version) => {
 }
 
 const publish = () => {
-  const cmd = spawn('npm', ['publish', '--tag', 'beta']);
+  const cmd = spawn(NPM, ['publish', '--tag', 'beta']);
   const out = cmd.stderr.toString().trim() || cmd.stdout.toString().trim();
   console.log(out);
 }
